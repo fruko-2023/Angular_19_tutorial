@@ -1,0 +1,35 @@
+
+<div align="center">
+    <h4>One way Data Bindings</h4>
+    <div>
+       <p>1.Interpolation</p>
+       <p> <b>{{topic}}</b> from {{name}}</p>
+    </div>
+
+    <div>
+        <p>2.Property Binding</p>
+        <input type="text" name="" [value]="topic">
+        <div style="height:160px; width: 120px;">
+              <img [src]="image" alt="NIMR Logo">
+        </div>
+        <p>One way Data Bindings</p>
+    <div>
+       <p>3.Event Binding</p>
+       <button (click)="onSave()">Save</button>
+       <select (change)="onChange()">
+         <option value="Country">Select Country</option>
+         <option value="India">India</option>
+         <option value="Germany">Germany</option>
+         <option value="France">France</option>
+         <option value="Spain">Spain</option>
+       </select>
+    </div>
+
+    <h4>Two way Data Binding</h4>
+    <div>
+        <!-- <input type="text" [(ngModel)]="random">
+        {{random}} -->
+        <input type="text" [(ngModel)]="topic">
+        {{topic}}
+    </div>
+</div>
