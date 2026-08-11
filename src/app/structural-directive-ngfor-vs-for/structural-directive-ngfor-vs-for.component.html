@@ -1,0 +1,118 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h3>Example of *ngFor vs For</h3>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <select name="" id="" class="p-2">
+      <!-- <option [value]="emp.id" *ngFor="let emp of employees">
+            {{emp.id}} - {{emp.name}} - {{emp.position}} - {{emp.email}} 
+                         {{emp.id}} - {{emp.name}}  -->
+      @for(emp of employees;track emp)
+      {
+      <option [value]="emp.id">
+
+        {{emp.id}} - {{emp.name}}
+      </option>
+      }
+    </select>
+  </div>
+
+  <div class="col-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.position}}</td>
+            <td>{{emp.email}}</td>
+          </tr> -->
+
+        @for(emp of employees;track emp)
+        {
+        <tr>
+          <td>{{emp.id}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.position}}</td>
+          <td>{{emp.email}}</td>
+        </tr>
+
+        }
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-2">
+    <ol style="list-style-type: decimal;">
+      <!-- <li *ngFor="let company of companyList">
+                {{company}}
+            </li> -->
+      @for(company of companyList;track company;let f=$first,l=$last,e=$even,o=$odd,c=$count,i=$index)
+      {
+      @if(f==true)
+      {
+      <li style="color:green">
+        {{company}}
+      </li>
+      }
+      @else if(l==true)
+      {
+      <li style="color:red">
+        {{company}}
+      </li>
+      }
+      @else
+      {
+      <li>
+        {{company}}
+      </li>
+      }
+      }
+      @empty
+      {
+        No Company found..........
+      }
+    </ol>
+  </div>
+
+</div>
+<hr>
+<div class="row text-center">
+  <div class="col-4">
+    <!-- <div *ngFor="let company of companyList; let i = index">
+          <p>{{company}}</p>
+       </div> -->
+    @for(company of companyList;track company)
+    {
+    <p>{{company}}</p>
+    }
+
+  </div>
+
+  <div class="col-8">
+    <!-- <button class="btn btn-primary m-3" *ngFor="let company of companyList">
+         {{company}}
+       </button> -->
+    @for(company of companyList;track company)
+    {
+    <button class="btn btn-primary m-3">
+      {{company}}
+    </button>
+    }
+  </div>
+
+  <div class="col-4">
+
+  </div>
+</div>

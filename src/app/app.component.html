@@ -1,6 +1,86 @@
-<app-directives></app-directives>
+
+<nav class="navbar navbar-expand bg-body-secondary">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="user">User</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"    routerLink="/signals">Signals</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  [routerLink]="'linked-signal'">Linked Signals</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/attribute-directives">Attribute-Directives</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/built-in-types">Built-In-Types</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-linked-signal></app-linked-signal> -->
+<!-- <app-signals></app-signals> -->
+<!-- <app-attribute-directives></app-attribute-directives> -->
+
+<!-- 
+<app-attribute
+<app-structural-directive-ngfor-vs-for></app-structural-directive-ngfor-vs-for> -->
+
+
+
+<!-- <app-structural-directive-ngif-vs-if></app-structural-directive-ngif-vs-if> -->
+<!-- 
+<app-directives></app-directives> -->
 <!-- <app-data-bindings></app-data-bindings> -->
 <!-- 
 <app-user></app-user> -->
-
-<router-outlet />
+<!-- 
+<router-outlet /> -->
