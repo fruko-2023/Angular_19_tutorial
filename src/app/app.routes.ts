@@ -5,6 +5,10 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
 import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BuiltInTypesComponent } from './built-in-types/built-in-types.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DataBindingsComponent } from './data-bindings/data-bindings.component';
 
 export const routes: Routes = [
     // {
@@ -24,6 +28,10 @@ export const routes: Routes = [
         component:SignalsComponent
     },
     {
+        path: 'data-binding',
+        component:DataBindingsComponent
+    },
+    {
         path:'attribute-directives',
         component:AttributeDirectivesComponent
     },
@@ -34,6 +42,18 @@ export const routes: Routes = [
     {
         path:'built-in-types',
         component:BuiltInTypesComponent
+    },
+    {
+        path:'tdf',
+        component:TemplateDrivenFormComponent
+    },
+    {
+        path:'rf',
+        component:ReactiveFormsComponent
+    },
+      {
+        path:'profile',
+        component:ProfileComponent
     },
     //This below isthe wild card parameters that is always put down of the other routes
     {

@@ -1,5 +1,17 @@
 
 <div align="center">
+    @if(isEligible)
+    {
+          <h4 class="text-success">You are eligible for premium subscription</h4>
+    }
+    @else
+    {
+          <h4 class="text-danger">You are not eligible for premium subscription</h4>
+
+    }
+    <h4 class="text-success"></h4>
+
+    <h2>User name:{{dummyData.name}}</h2>
     <h4>One way Data Bindings</h4>
     <div>
        <p>1.Interpolation</p>

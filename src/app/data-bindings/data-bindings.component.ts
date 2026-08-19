@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-data-bindings',
@@ -8,6 +9,20 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './data-bindings.component.scss'
 })
 export class DataBindingsComponent {
+
+ dummyData:any;
+  isEligible:boolean;
+
+  constructor(private _sharedData:SharedDataService){
+    this.dummyData=this._sharedData.userData
+
+    this.isEligible=this._sharedData.isEligibleForSubscription();
+  }
+
+
+
+
+  
   //One way data binding using interpolation
   name: string = "FEDLearning";
   topic: string = "Data Bindings";

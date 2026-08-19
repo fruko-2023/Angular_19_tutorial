@@ -1,4 +1,8 @@
 <div class="m-3">
+    <h6>Mobile Number : {{ mobileNumber | custom}}</h6>
+    <h6>6. customizedDateFormat : {{ currentDate | custom}}</h6>
+    <h6>7.Pure Pipe : Square of 7 is {{ 7 | pure}}</h6>
+    <h6>7.Impure Pipe : {{ currentDate | impure}}</h6>
     <!-- <h3 class="text-primary m-3">String type pipes</h3>
     <h4>1.UpperCasePipe:{{angularPipes | uppercase}}</h4>
     <h4>2.LowerCasePipe:{{angularPipes | lowercase}}</h4>
@@ -42,12 +46,12 @@
 <!-- <h4>DatePipeMixedwithUpperPipe: {{currentDate |date | uppercase}}</h4> -->
    
 <h4>
-    10.AsyncPipe:
-    <ul>
+    <!-- 10.AsyncPipe: -->
+    <!-- <ul>
         @for(item of items | async;track item)
         {
             <li>{{item}}</li>
         }
-    </ul>
+    </ul> -->
 </h4>
 </div>

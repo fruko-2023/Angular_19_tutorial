@@ -1,0 +1,85 @@
+<div class="container">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" no>
+         <!-- <pre>Value :{{userForm.value | json}}</pre>-->
+         <pre>Valid :{{userForm.valid}}</pre>
+         <!-- <pre>Invalid :{{userForm.invalid}}</pre> -->
+         <!-- <pre>Touched :{{userForm.touched}}</pre> -->
+         <!-- <pre>Untouched :{{userForm.untouched}}</pre> -->
+        <!--<pre>Submitted :{{userForm.submitted}}</pre> -->
+       
+       
+        <h2 class="text-center m-2">User Information</h2>
+        <!-- {{ firstname }} -->
+       <div class="form-group m-3">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="Enter first name" #fname="ngModel" name="firstname" [(ngModel)]="userObject.firstname" minlength="5" maxlength="20" required>
+            @if((fname?.dirty || fname?.touched))
+            {
+                @if(fname?.errors?.['required'])
+                {
+                    <small class="text-danger">Firstname is required</small>
+                }
+                @if(fname?.errors?.['minlength'])
+                {
+                    <small class="text-danger">The minimum length of the firstname should be 5.</small>
+                }
+                 @if(fname?.errors?.['minlength'])
+                {
+                    <small class="text-danger">The maximum length of the firstname should not exceed 20.</small>
+                }
+            }
+        </div>
+          <!-- {{ lastname }} -->
+        <div class="form-group m-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Enter last name" #lname="ngModel" name="lastname" [(ngModel)]="userObject.lastname" pattern="^[a-zA-Z]+$" minlength="5" maxlength="10" required>
+            @if((lname?.dirty || fname?.touched))
+            {
+                @if(lname?.errors?.['required'])
+                {
+                    <small class="text-danger">Firstname is required</small>
+                }
+                @if(lname?.errors?.['minlength'])
+                {
+                    <small class="text-danger">The minimum length of the lastname should be 5.</small>
+                }
+                 @if(lname?.errors?.['maxlength'])
+                {
+                    <small class="text-danger">The maximum length of the lasttname should not exceed 10.</small>
+                }
+                  @if(lname?.errors?.['pattern'])
+                {
+                    <small class="text-danger">Lastname does not match the required pattern.</small>
+                }
+            }
+        </div>
+        <div class="form-group m-3">
+            <label>Email</label>
+            <input type="text" class="form-control" placeholder="Enter email address" #emailid="ngModel" name="email" [(ngModel)]="userObject.email" email required>
+             @if((emailid?.dirty || emailid?.touched))
+            {
+                @if(emailid?.errors?.['required'])
+                {
+                    <small class="text-danger">Email address id required</small>
+                }
+                @if(emailid?.errors?.['email'])
+                {
+                    <small class="text-danger">Please enter a valid email address</small>
+                }
+            }
+        </div>
+        <div class="form-group m-3">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="userObject.password">
+        </div>
+        <div class="form-check m-3">
+            <input type="checkbox" class="form-check-input" name="isCheck" [(ngModel)]="userObject.isCheck">
+            <label>Check me out</label>
+        </div>
+        <!-- <button class="btn btn-success m-2" [disabled]="userForm.invalid">Submit</button> -->
+        <button class="btn btn-success m-2" [disabled]="!userForm.valid">Submit</button>
+        <!-- <button class="btn btn-warning m-2" (click)="setValues(userForm)">Set Values</button> -->
+        <button class="btn btn-primary m-2" (click)="patchValues(userForm)">Patch Values</button>
+        <!-- <button class="btn btn-secondary m-2" (click)="resetValues(userForm)">Reset</button> -->
+    </form>
+</div>

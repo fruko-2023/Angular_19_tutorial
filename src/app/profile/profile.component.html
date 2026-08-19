@@ -1,0 +1,26 @@
+<div class="m-3">
+    <!-- 1.Share data between components -->
+<!-- <ul>
+    <li>Id:{{dummyData.id}}</li>
+    <li>Name:{{dummyData.name}}</li>
+    <li>Usename:{{dummyData.username}}</li>
+    <li>Email:{{dummyData.email}}</li>
+  </ul> -->
+  <!-- 2.Share business logic across multiple components -->
+    <!-- @if(isEligible)
+    {
+        <h4 class="text-success">You are eligible for a premium subscription</h4>
+    }
+    @else
+    {
+        <h4 class="text-danger">You are not eligible for a premium subscription</h4>
+
+    } -->
+  <!-- 3.Interaction with API(Interact with Database or external data source) -->
+  <ul *ngFor="let data of apiData">
+    <li>Id:{{data.id}}</li>
+    <li>Name:{{data.name}}</li>
+    <li>Usename:{{data.username}}</li>
+    <li>Email:{{data.email}}</li>
+  </ul>
+</div>
