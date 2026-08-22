@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
-import { CrudService } from '../crud.service';
+import { CrudService } from '../Services/crud.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ReusableComponent } from '../reusable/reusable.component';
 
 @Component({
   selector: 'app-view-user',
-  imports: [],
+  imports: [ReusableComponent],
   templateUrl: './view-user.component.html',
   styleUrl: './view-user.component.scss'
 })
 export class ViewUserComponent {
    constructor(private crud:CrudService,private activeRoute:ActivatedRoute,private router:Router){}
-
+    
+   parentProperty:string="View-user:Kindly read the user details.";
+  
  userData:any;
 
   userId!:{

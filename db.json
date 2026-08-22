@@ -2,9 +2,15 @@
   "Users": [
     {
       "id": 1,
-      "name": "Shivam-mpya",
-      "username": "shivam-baada",
-      "email": "shivam@hamil.com-mpya"
+      "name": "Philbert Rukoroba",
+      "username": "ruko",
+      "email": "philbert.rukoroba@yahoo.com"
+    },
+    {
+      "name": "Anadoles",
+      "username": "Anacleth",
+      "email": "Kweyunga",
+      "id": 2
     }
   ]
 }

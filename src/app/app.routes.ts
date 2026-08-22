@@ -13,6 +13,8 @@ import { CRUDComponent } from './crud/crud.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { ResourceApiComponent } from './resource-api/resource-api.component';
+import { ReusableComponent } from './reusable/reusable.component';
 
 export const routes: Routes = [
     // {
@@ -74,6 +76,14 @@ export const routes: Routes = [
     {
         path:'updateuser/:id',
         component:UpdateUserComponent
+    },
+     {
+        path:'resourceapi',
+        component:ResourceApiComponent
+    },
+      {
+        path:'reusable',
+        component:ReusableComponent
     },
     //This below isthe wild card parameters that is always put down of the other routes
     {
