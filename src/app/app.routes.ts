@@ -15,6 +15,8 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { ResourceApiComponent } from './resource-api/resource-api.component';
 import { ReusableComponent } from './reusable/reusable.component';
+import { ParentComponent } from './parent/parent.component';
+import { StorageComponent } from './storage/storage.component';
 
 export const routes: Routes = [
     // {
@@ -84,6 +86,14 @@ export const routes: Routes = [
       {
         path:'reusable',
         component:ReusableComponent
+    },
+    {
+        path:'parent',
+        component:ParentComponent
+    },
+       {
+        path:'storage',
+        component:StorageComponent
     },
     //This below isthe wild card parameters that is always put down of the other routes
     {
